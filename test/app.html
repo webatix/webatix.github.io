@@ -14,15 +14,16 @@
       </kor-avatar>
     </kor-app-bar>
     <kor-nav-bar slot="bottom">
-      <kor-tab-item label="Summary" active></kor-tab-item>
-      <kor-tab-item label="Transactions"></kor-tab-item>
-      <kor-tab-item label="Schedule"></kor-tab-item>
+      <kor-tabs orientation="horizontal">
+        <kor-tab-item label="Summary" active></kor-tab-item>
+        <kor-tab-item label="Transactions"></kor-tab-item>
+        <kor-tab-item label="Schedule"></kor-tab-item>
+      </kor-tabs>
     </kor-nav-bar>
   </kor-page>
   <kor-modal id="appSettingsModal" icon="settings" label="WebApp settings">
   </kor-modal>
   <script src='./bundle.js'></script>
-  <link rel="stylesheet" type="text/css" href="./bundle.css"
-/>
+  <link rel="stylesheet" type="text/css" href="./bundle.css"/>
 </body>
 </html>
