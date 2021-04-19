@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>The crypto-subscriptions WebApp</title>
+</head>
+<body>
+  <kor-page flat theme="light" flex-direction="column">
+    <kor-app-bar slot="top" label="The crypto-subscriptions WebApp" logo="https://webatix.github.io/test/xrp.svg">
+      <kor-icon id="appSettings" slot="functions" icon="settings" button></kor-icon>
+      <kor-avatar slot="functions" label="User" info="User account">
+      </kor-avatar>
+    </kor-app-bar>
+    <kor-nav-bar slot="bottom">
+      <kor-tab-item label="Summary" active></kor-tab-item>
+      <kor-tab-item label="Transactions"></kor-tab-item>
+      <kor-tab-item label="Schedule"></kor-tab-item>
+    </kor-nav-bar>
+  </kor-page>
+  <kor-modal id="appSettingsModal" icon="settings" label="WebApp settings">
+  </kor-modal>
+  <script src='./bundle.js'></script>
+  <link rel="stylesheet" type="text/css" href="./bundle.css"
+/>
+</body>
+</html>
