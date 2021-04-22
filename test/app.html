@@ -9,37 +9,30 @@
   <script src="https://unpkg.com/moralis@0.0.9/dist/moralis.js"></script>
 </head>
 <body>
-  <kor-page flat theme="light" flex-direction="column">
-    <kor-app-bar slot="top" label="The crypto-subscriptions DApp" logo="https://webatix.github.io/test/xrp.svg">
-      <kor-icon id="appSettings" slot="functions" icon="settings" button></kor-icon>
-      <kor-avatar slot="functions" label="User" info="User account">
-      </kor-avatar>
-    </kor-app-bar>
-    <kor-grid columns="1" fit-content>
-    </kor-grid>
-    <kor-nav-bar slot="bottom">
-      <kor-tabs orientation="horizontal">
-      </kor-tabs>
-    </kor-nav-bar>
-  </kor-page>
-  <kor-modal id="appSettingsModal" icon="settings" label="DApp settings">
-    <kor-menu-item id="loginMenuItem" label="Login using Metamask" icon="people"></kor-menu-item>
-    <kor-menu-item id="prefsMenuItem" label="Preferences" icon="work"></kor-menu-item>
-  </kor-modal>
+  <div id="startupContent">
+    The DApp is loading ...
+  </div>
+  <template id="appTemplate">
+    <kor-page flat theme="light" flex-direction="column">
+      <kor-app-bar slot="top" label="The crypto-subscriptions DApp" logo="https://webatix.github.io/test/xrp.svg">
+        <kor-icon id="appSettings" slot="functions" icon="settings" button></kor-icon>
+        <kor-avatar slot="functions" label="User" info="User account">
+        </kor-avatar>
+      </kor-app-bar>
+      <kor-grid columns="1">
+      </kor-grid>
+      <kor-nav-bar slot="bottom">
+        <kor-tabs orientation="horizontal">
+        </kor-tabs>
+      </kor-nav-bar>
+    </kor-page>
+    <kor-modal id="appSettingsModal" icon="settings" label="DApp settings">
+      <kor-menu-item id="loginMenuItem" label="Login using Metamask" icon="people" toggle="false"></kor-menu-item>
+      <kor-menu-item id="prefsMenuItem" label="Preferences" icon="work" toggle="false"></kor-menu-item>
+    </kor-modal>
+  </template>
   <!-- The scripts and styles below are designed to be at the end of the body -->
-  <script>
-    const app_page = document.querySelector("kor-page");
-    const app_page_content = document.querySelector("kor-grid");
-    const app_bar = document.querySelector("kor-app-bar");
-    const app_settings = document.getElementById('appSettings');
-    const app_settings_modal = document.getElementById('appSettingsModal');
-    const login_menu = document.getElementById('loginMenuItem');
-    const prefs_menu = document.getElementById('prefsMenuItem');
-    const tab_strip = document.querySelector("kor-tabs");
-    const viewport_width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    const viewport_height = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-  </script>
-  <script src='./bundle.js'></script>
   <link rel="stylesheet" type="text/css" href="./bundle.css"/>
+  <script src='./bundle.js'></script>
 </body>
 </html>
