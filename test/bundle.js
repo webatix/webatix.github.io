@@ -5635,11 +5635,6 @@ class f{constructor(e,t,o){this.__parts=[],this.template=e,this.processor=t,this
       <kor-grid spacing="1" columns="2">
         <kor-card grid-cols="1" grid-cols-m="2" grid-cols-s="2" flat>
           <kor-text size="header-1">Incoming transactions</kor-text>
-        </kor-card>
-        <kor-card grid-cols="1" grid-cols-m="2" grid-cols-s="2" flat>
-          <kor-text size="header-1">Out coming transactions</kor-text>
-        </kor-card>
-        <kor-card grid-cols="1" grid-cols-m="2" grid-cols-s="2" flat>
           <kor-table columns="200px 1fr auto">
             <kor-table-row slot="header">
               <kor-table-cell head>Key</kor-table-cell>
@@ -5654,6 +5649,7 @@ class f{constructor(e,t,o){this.__parts=[],this.template=e,this.processor=t,this
           </kor-table>
         </kor-card>
         <kor-card grid-cols="1" grid-cols-m="2" grid-cols-s="2" flat>
+          <kor-text size="header-1">Out coming transactions</kor-text>
           <kor-table columns="200px 1fr auto">
             <kor-table-row slot="header">
               <kor-table-cell head>Key</kor-table-cell>
