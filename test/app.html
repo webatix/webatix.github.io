@@ -15,12 +15,21 @@
   <template id="appTemplate">
     <kor-page flat theme="light" flex-direction="column">
       <kor-app-bar slot="top" label="The crypto-subscriptions DApp" logo="https://webatix.github.io/test/xrp.svg">
-        <kor-icon id="appSettings" slot="functions" icon="settings" button></kor-icon>
-        <kor-avatar slot="functions" label="User" info="User account">
-        </kor-avatar>
+        <kor-icon id="addTransaction" slot="functions" icon="credit_card" button style="display: none"></kor-icon>
+        <kor-icon id="appMenu" slot="functions" icon="menu" button></kor-icon>
       </kor-app-bar>
+      <kor-tooltip id="addTransactionTooltip" target="#addTransaction" position="left" label="Make a transaction" icon="credit_card"></kor-tooltip>
+      <kor-tooltip id="appMenuTooltip" target="#appMenu" position="left" label="DApp menu" icon="menu"></kor-tooltip>
+      <kor-popover id="appMenuPopover" target="#appMenu" position="left" label="DApp menu" icon="menu">
+        <kor-menu-item id="loginMenuItem" label="Login using Metamask" icon="person" toggle="false"></kor-menu-item>
+        <kor-menu-item id="prefsMenuItem" label="Preferences" icon="work" toggle="false"></kor-menu-item>
+      </kor-popover>
       <kor-grid columns="1">
-        <div id="summaryContent" style="display: block"></div>
+        <div id="summaryContent" style="display: block">
+          <kor-avatar slot="functions" label="User" info="User account">
+          </kor-avatar>
+          <div id="summaryDetails"></div>
+        </div>
         <div id="transactionsContent" style="display: none"></div>
         <div id="scheduleContent" style="display: none"></div>
       </kor-grid>
@@ -29,9 +38,10 @@
         </kor-tabs>
       </kor-nav-bar>
     </kor-page>
-    <kor-modal id="appSettingsModal" icon="settings" label="DApp settings">
-      <kor-menu-item id="loginMenuItem" label="Login using Metamask" icon="people" toggle="false"></kor-menu-item>
-      <kor-menu-item id="prefsMenuItem" label="Preferences" icon="work" toggle="false"></kor-menu-item>
+    <kor-modal id="addTransactionModal" icon="credit_card" label="Add a transaction">
+    </kor-modal>
+    <kor-modal id="transactionDetailsModal" icon="list" label="The transaction's details">
+      <div></div>
     </kor-modal>
   </template>
   <!-- The scripts and styles below are designed to be at the end of the body -->
