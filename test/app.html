@@ -10,7 +10,8 @@
 </head>
 <body>
   <div id="startupContent">
-    The DApp is loading ...
+    The DApp is loading ...<br><br>
+    On stuck here just clear the browser's cache and reload the page.
   </div>
   <template id="appTemplate">
     <kor-page flat theme="light" flex-direction="column">
@@ -18,8 +19,8 @@
         <kor-icon id="addTransaction" slot="functions" icon="credit_card" button style="display: none"></kor-icon>
         <kor-icon id="appMenu" slot="functions" icon="menu" button></kor-icon>
       </kor-app-bar>
-      <kor-tooltip id="addTransactionTooltip" target="#addTransaction" position="left" label="Make a transaction" icon="credit_card"></kor-tooltip>
-      <kor-tooltip id="appMenuTooltip" target="#appMenu" position="left" label="DApp menu" icon="menu"></kor-tooltip>
+      <kor-tooltip id="addTransactionTooltip" target="#addTransaction" position="left">Add a transaction</kor-tooltip>
+      <kor-tooltip id="appMenuTooltip" target="#appMenu" position="left">DApp menu</kor-tooltip>
       <kor-popover id="appMenuPopover" target="#appMenu" position="left" label="DApp menu" icon="menu">
         <kor-menu-item id="loginMenuItem" label="Login using Metamask" icon="person" toggle="false"></kor-menu-item>
         <kor-menu-item id="prefsMenuItem" label="Preferences" icon="work" toggle="false"></kor-menu-item>
@@ -38,9 +39,12 @@
         </kor-tabs>
       </kor-nav-bar>
     </kor-page>
-    <kor-modal id="addTransactionModal" icon="credit_card" label="Add a transaction">
+    <kor-modal id="addTransactionModal" icon="credit_card" label="Add a transaction" theme="light">
+      <kor-input label="The destination address" value=""></kor-input>
+      <kor-input label="The value transferred for the transaction in Wei" value="1" type="number"></kor-input>
+      <kor-button label="Send" color="Primary"></kor-button>
     </kor-modal>
-    <kor-modal id="transactionDetailsModal" icon="list" label="The transaction's details">
+    <kor-modal id="transactionDetailsModal" icon="list" label="The transaction's details" theme="light">
       <div></div>
     </kor-modal>
   </template>
