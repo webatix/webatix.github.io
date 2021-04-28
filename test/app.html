@@ -40,9 +40,9 @@
       </kor-nav-bar>
     </kor-page>
     <kor-modal id="addTransactionModal" icon="credit_card" label="Add a transaction" theme="light">
-      <kor-input label="The destination address" value=""></kor-input>
-      <kor-input label="The value transferred for the transaction in Wei" value="1" type="number"></kor-input>
-      <kor-button label="Send" color="Primary"></kor-button>
+      <kor-input id="addTransactionModalAddress" label="The destination address" value=""></kor-input>
+      <kor-input id="addTransactionModalAmount" label="The value transferred for the transaction in Wei" value="1" type="number"></kor-input>
+      <kor-button id="addTransactionModalButton" label="Send" color="Primary"></kor-button>
     </kor-modal>
     <kor-modal id="transactionDetailsModal" icon="list" label="The transaction's details" theme="light">
       <div></div>
