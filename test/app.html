@@ -25,34 +25,28 @@
         <kor-menu-item id="loginMenuItem" label="Login using Metamask" icon="person" toggle="false"></kor-menu-item>
         <kor-menu-item id="prefsMenuItem" label="Preferences" icon="work" toggle="false"></kor-menu-item>
       </kor-popover>
-      <kor-grid columns="1">
-        <div id="summaryContent" style="display: block">
-          <div>
-            <kor-icon class="heading_icon" icon="account_balance" color="var(--text-1)" size="m"></kor-icon>
-            <kor-card class="heading_tools" flat>
-              <kor-avatar label="User" info="User account"></kor-avatar>
-            </kor-card>
-          </div><br>
-          <div id="summaryDetails"></div>
+      <kor-grid columns="1" rows="10">
+        <div id="summaryContent" grid-rows="1" style="display: block">
+          <kor-icon class="heading_icon" icon="account_balance" color="var(--text-1)" size="m"></kor-icon>
+          <kor-card class="heading_tools" flat>
+            <kor-avatar label="User" info="User account"></kor-avatar>
+          </kor-card>
         </div>
-        <div id="transactionsContent" style="display: none">
-          <div>
-            <kor-icon class="heading_icon" icon="account_balance_wallet" color="var(--text-1)" size="m"></kor-icon>
-            <kor-card class="heading_tools" flat>
-              <kor-button id="transactionsFilterButton" label="Set up a display filter" color="Primary"></kor-button>
-            </kor-card>
-          </div><br>
-          <div id="transactionsDetails"></div>
+        <div id="summaryDetails" grid-rows="9" style="display: block"></div>
+        <div id="transactionsContent" grid-rows="1" style="display: none">
+          <kor-icon class="heading_icon" icon="account_balance_wallet" color="var(--text-1)" size="m"></kor-icon>
+          <kor-card class="heading_tools" flat>
+            <kor-button id="transactionsFilterButton" label="Set up a display filter" color="Primary"></kor-button>
+          </kor-card>
         </div>
-        <div id="scheduleContent" style="display: none">
-          <div>
-            <kor-icon class="heading_icon" icon="schedule" color="var(--text-1)" size="m"></kor-icon>
-            <kor-card class="heading_tools" flat>
-              <kor-button class="heading_tools" id="scheduleAddButton" label="Add a payment" color="Primary"></kor-button>
-            </kor-card>
-          </div><br>
-          <div id="scheduleDetails"></div>
+        <div id="transactionsDetails" grid-rows="9" style="display: none"></div>
+        <div id="scheduleContent" grid-rows="1" style="display: none">
+          <kor-icon class="heading_icon" icon="schedule" color="var(--text-1)" size="m"></kor-icon>
+          <kor-card class="heading_tools" flat>
+            <kor-button class="heading_tools" id="scheduleAddButton" label="Add a payment" color="Primary"></kor-button>
+          </kor-card>
         </div>
+        <div id="scheduleDetails" grid-rows="9" style="display: none"></div>
       </kor-grid>
       <kor-nav-bar slot="bottom">
         <kor-tabs orientation="horizontal">
