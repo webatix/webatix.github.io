@@ -54,12 +54,16 @@
       </kor-nav-bar>
     </kor-page>
     <kor-modal id="addTransactionModal" icon="credit_card" label="Add a transaction" theme="light">
-      <kor-input id="addTransactionModalAddress" label="The destination address" value=""></kor-input>
-      <kor-input id="addTransactionModalAmount" label="The value transferred for the transaction in Wei" value="1" type="number"></kor-input>
-      <kor-button id="addTransactionModalButton" label="Send" color="Primary"></kor-button>
+      <div id="addTransactionModalContent"></div>
+      <kor-button id="addTransactionModalButton" label="Send" color="Primary" slot="footer"></kor-button>
     </kor-modal>
     <kor-modal id="transactionDetailsModal" icon="list" label="The transaction's details" theme="light">
       <div></div>
+    </kor-modal>
+    <kor-modal id="addScheduleModal" icon="today" label="Add a recurrent payment" theme="light">
+      <div id="addScheduleModalContent"></div>
+      <input type="date">
+      <kor-button id="addScheduleModalButton" label="Add" color="Primary" slot="footer"></kor-button>
     </kor-modal>
   </template>
   <!-- The scripts and styles below are designed to be at the end of the body -->
