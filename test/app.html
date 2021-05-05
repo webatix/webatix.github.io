@@ -15,6 +15,7 @@
   </div>
   <template id="appTemplate">
     <kor-page flat theme="light" flex-direction="column">
+      <div id="pageNotification"></div>
       <kor-app-bar slot="top" label="The crypto-subscriptions DApp" logo="https://webatix.github.io/test/xrp.svg">
         <kor-icon id="addTransaction" slot="functions" icon="credit_card" button style="display: none"></kor-icon>
         <kor-icon id="appMenu" slot="functions" icon="menu" button></kor-icon>
@@ -54,15 +55,25 @@
       </kor-nav-bar>
     </kor-page>
     <kor-modal id="addTransactionModal" icon="credit_card" label="Add a transaction" theme="light">
-      <div id="addTransactionModalContent"></div>
+      <div id="addTransactionModalNotification"></div>
+      <kor-card flat>
+        <kor-grid columns="1" fit-content>
+          <kor-card id="addTransactionModalContent" grid-cols="1" flat></kor-card>
+        </kor-grid>
+      </kor-card>
       <kor-button id="addTransactionModalButton" label="Send" color="Primary" slot="footer"></kor-button>
     </kor-modal>
     <kor-modal id="transactionDetailsModal" icon="list" label="The transaction's details" theme="light">
-      <div></div>
+      <kor-card flat></kor-card>
     </kor-modal>
     <kor-modal id="addScheduleModal" icon="today" label="Add a recurrent payment" theme="light">
-      <div id="addScheduleModalContent"></div>
-      <input type="date">
+      <div id="addScheduleModalNotification"></div>
+      <kor-card flat>
+        <kor-grid columns="1" fit-content>
+          <kor-card id="addScheduleModalTransactionContent" grid-cols="1" flat></kor-card>
+          <kor-card id="addScheduleModalScheduleContent" grid-cols="1" flat></kor-card>
+        </kor-grid>
+      </kor-card>
       <kor-button id="addScheduleModalButton" label="Add" color="Primary" slot="footer"></kor-button>
     </kor-modal>
   </template>
