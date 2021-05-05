@@ -2852,7 +2852,7 @@ var K,X,Z,Q,G,Y;J.finalized=!0,J.shadowRootOptions={mode:"open"},null===(H=(L=gl
           <kor-grid columns="1">
             <kor-text grid-cols="1" size="body-1">Repeat each 30 days</kor-text>
             <kor-slider grid-cols="1" value="30" min="0" max="366" step="1"
-              @value-changed="${e=>{t.interval_days=Number.parseInt(e.target.value);e.target.parentElement.querySelector("kor-text").innerHTML="Repeat after "+t.interval_days.toFixed(0)+" days"}}"
+              @value-changed="${e=>{t.interval_days=Number.parseInt(e.target.value);e.target.parentElement.querySelector("kor-text").innerHTML="Repeat each "+t.interval_days.toFixed(0)+" days"}}"
             >
             </kor-slider>
           </kor-grid>
