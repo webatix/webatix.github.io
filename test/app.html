@@ -7,6 +7,7 @@
   <title>The crypto-subscriptions DApp</title>
   <script src="https://cdn.jsdelivr.net/npm/web3@1.3.3/dist/web3.min.js"></script>
   <script src="https://unpkg.com/moralis@0.0.9/dist/moralis.js"></script>
+  <script src="https://unpkg.com/@maticnetwork/maticjs@latest/dist/matic.js"></script>
 </head>
 <body>
   <div id="startupContent">
@@ -18,6 +19,8 @@
       <div id="pageNotification"></div>
       <kor-app-bar slot="top" label="The crypto-subscriptions DApp" logo="https://webatix.github.io/test/xrp.svg">
         <kor-icon id="addTransaction" slot="functions" icon="credit_card" button style="display: none"></kor-icon>
+        <kor-icon id="switchChain" slot="functions" icon="timeline" button style="display: none"></kor-icon>
+        <kor-icon id="depositEthers" slot="functions" icon="shopping_basket" button style="display: none"></kor-icon>
         <kor-icon id="appMenu" slot="functions" icon="menu" button></kor-icon>
       </kor-app-bar>
       <kor-tooltip id="addTransactionTooltip" target="#addTransaction" position="left">Add a transaction</kor-tooltip>
@@ -75,6 +78,13 @@
         </kor-grid>
       </kor-card>
       <kor-button id="addScheduleModalButton" label="Add" color="Primary" slot="footer"></kor-button>
+    </kor-modal>
+    <kor-modal id="depositEthersModal" icon="shopping_basket" label="Deposit Ethers to get some Matic" theme="light">
+      <div id="depositEthersModalNotification"></div>
+      <kor-card flat>
+        <kor-input id="depositEthersModalValue" type="number" min=0></kor-input>
+      </kor-card>
+      <kor-button id="depositEthersModalButton" label="Deposit" color="Primary" slot="footer"></kor-button>
     </kor-modal>
   </template>
   <!-- The scripts and styles below are designed to be at the end of the body -->
