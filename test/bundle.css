@@ -1,13 +1,3 @@
-.heading_icon {
-  color: var(--text-1);
-  display: table-cell;
-  vertical-align: middle;
-  padding-right: 16px; }
-
-.heading_tools {
-  display: table-cell;
-  vertical-align: middle; }
-
 /* colors */
 html, *[theme="light"] {
   --neutral-1: 0, 0, 0;
